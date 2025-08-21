@@ -39,3 +39,26 @@ header {
   border-radius: 20px;
   padding: 5px;
 }
+
+#header-direita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  div {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 30px;
+    }
+  }
+}
+
+#logOut {
+  --background: red;
+  --box-shadow: none;
+}

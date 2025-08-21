@@ -1,39 +1,30 @@
 <ion-content>
   <header>
     <img src="../../assets/images/icon2.png" alt="Icone">
-    <ion-buttons>
-      <ion-button>Home</ion-button>
-    </ion-buttons>
+    <div id="header-direita">
+      <ion-buttons>
+        <ion-button>Home</ion-button>
+      </ion-buttons>
+      <div>
+        <img id="userIcon" src="../../assets/images/user.png" alt="">
+        <ion-text>{{usuario}}</ion-text>
+      </div>
+      <ion-button id="logOut" (click)="logOut()">sair</ion-button>
+    </div>
   </header>
 
   <section id="formulario">
     <div>
-      <div class="dataSelector">
-        <ion-text>Data de Abertura</ion-text>
-        <ion-datetime-button datetime="dataAbertura"></ion-datetime-button>
-        <ion-modal [keepContentsMounted]="true">
-          <ng-template>
-            <ion-datetime id="dataAbertura" presentation="date"></ion-datetime>
-          </ng-template>
-        </ion-modal>
-      </div>
+      <ion-input type="date" label="Data de Abertura" labelPlacement="floating" [(ngModel)]="dataAbertura"></ion-input>
 
-      <div class="dataSelector">
-        <ion-text>Data Prevista</ion-text>
-        <ion-datetime-button datetime="dataPrevista"></ion-datetime-button>
-        <ion-modal [keepContentsMounted]="true">
-          <ng-template>
-            <ion-datetime id="dataPrevista" presentation="date"></ion-datetime>
-          </ng-template>
-        </ion-modal>
-      </div>
+      <ion-input type="date" label="Data Prevista de Início" labelPlacement="floating" [(ngModel)]="dataPrevista"></ion-input>
 
-      <ion-select label="Selecione o recrutador..." labelPlacement="floating">
+      <ion-select label="Selecione o recrutador..." labelPlacement="floating" [(ngModel)]="recrutador">
         <ion-select-option>Lidiane</ion-select-option>
         <ion-select-option>Ramon</ion-select-option>
       </ion-select>
 
-      <ion-select label="Selecione o tipo da vaga..." labelPlacement="floating">
+      <ion-select label="Selecione o tipo da vaga..." labelPlacement="floating" [(ngModel)]="cobreFerias">
         <ion-select-option>Substituição</ion-select-option>
         <ion-select-option>Cobre Férias</ion-select-option>
         <ion-select-option>Ampliação</ion-select-option>
@@ -42,15 +33,15 @@
         <ion-select-option>Acidente de Trabalho</ion-select-option>
       </ion-select>
 
-      <ion-select label="Selecione o cliente..." labelPlacement="floating">
+      <ion-select label="Selecione o cliente..." labelPlacement="floating" [(ngModel)]="cliente">
         <ion-select-option *ngFor="let item of clientes">{{item.nome}}</ion-select-option>
       </ion-select>
 
-      <ion-input label="Digite a UF..." labelPlacement="floating" placeholder="Ex: MG"></ion-input>
+      <ion-input label="Digite a UF..." labelPlacement="floating" placeholder="Ex: MG" [(ngModel)]="uf"></ion-input>
 
-      <ion-input label="Digite a cidade..." labelPlacement="floating"></ion-input>
+      <ion-input label="Digite a cidade..." labelPlacement="floating" [(ngModel)]="cidade"></ion-input>
 
-      <ion-select label="Selecione a situação da vaga..." labelPlacement="floating">
+      <ion-select label="Selecione a situação da vaga..." labelPlacement="floating" [(ngModel)]="situacao">
         <ion-select-option>Abertura de Vaga</ion-select-option>
         <ion-select-option>Divulgação</ion-select-option>
         <ion-select-option>Triagem</ion-select-option>
@@ -61,7 +52,7 @@
         <ion-select-option>Vaga Concluída</ion-select-option>
       </ion-select>
 
-      <ion-select label="Selecione o tipo de contratação..." labelPlacement="floating">
+      <ion-select label="Selecione o tipo de contratação..." labelPlacement="floating" [(ngModel)]="tipoContratacao">
         <ion-select-option>6019</ion-select-option>
         <ion-select-option>CLT</ion-select-option>
         <ion-select-option>Coligada</ion-select-option>
@@ -69,9 +60,9 @@
         <ion-select-option>Freelancer</ion-select-option>
       </ion-select>
 
-      <ion-input label="Observações..." labelPlacement="floating"></ion-input>
+      <ion-input label="Observações..." labelPlacement="floating" [(ngModel)]="observacoes"></ion-input>
 
-      <ion-button>Adicionar nova vaga</ion-button>
+      <ion-button (click)="postVaga()">Adicionar nova vaga</ion-button>
     </div>
   </section>
 </ion-content>
