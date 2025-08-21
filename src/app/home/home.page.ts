@@ -11,13 +11,7 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
   constructor(private supabase: Supabase, private router: Router) {}
   async ngOnInit() {
-    const session = await this.getSession();
-
-    if (!session) {
-      this.router.navigate(['/login']);
-      return;
-    }
-
+    await this.getSession();
     await this.getUser();
     await this.getClientes();
   }
