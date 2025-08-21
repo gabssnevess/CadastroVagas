@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AlertController, IonicModule } from '@ionic/angular';
 import { Supabase } from 'src/app/services/supabase/supabase';
 
@@ -9,7 +9,7 @@ import { Supabase } from 'src/app/services/supabase/supabase';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, RouterModule]
 })
 export class HeaderComponent implements OnInit {
   constructor(private supabase: Supabase, private router: Router, private alertController: AlertController) {}

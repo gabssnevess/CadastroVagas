@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'alterar-cadastros',
+    loadChildren: () => import('./pages/alterar-cadastros/alterar-cadastros.module').then( m => m.AlterarCadastrosPageModule)
+  },
 ];
 
 @NgModule({

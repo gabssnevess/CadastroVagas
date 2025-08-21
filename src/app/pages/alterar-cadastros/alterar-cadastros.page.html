@@ -1,0 +1,50 @@
+<ion-content>
+  <app-header></app-header>
+
+  <section id="secao-tabela">
+    <h3>Registros Existentes</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Data Abertura</th>
+          <th>Data Prevista</th>
+          <th>Data Fechamento</th>
+          <th>Status</th>
+          <th>Status Aberto</th>
+          <th>Recrutador</th>
+          <th>Cliente</th>
+          <th>UF</th>
+          <th>Cidade</th>
+          <th>Situação</th>
+          <th>Tipo</th>
+          <th>Tipo Contratação</th>
+          <th>Observações</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of tabela">
+          <td>{{item.id}}</td>
+          <td>{{item.data_abertura}}</td>
+          <td>{{item.data_prevista_inicio}}</td>
+          <td>{{item.data_fechamento}}</td>
+          <td>{{item.status}}</td>
+          <td>{{item.status_em_aberto}}</td>
+          <td>{{item.recrutador}}</td>
+          <td>{{item.cliente}}</td>
+          <td>{{item.uf}}</td>
+          <td>{{item.cidade}}</td>
+          <td>{{item.situacao}}</td>
+          <td>{{item.cobre_ferias}}</td>
+          <td>{{item.tipo_contratacao}}</td>
+          <td>{{item.observacoes}}</td>
+          <td>
+            <ion-button class="btn-alterar">alterar</ion-button>
+            <ion-button class="btn-deletar">deletar</ion-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</ion-content>

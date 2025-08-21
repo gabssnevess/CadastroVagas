@@ -2,7 +2,8 @@
   <img src="../../assets/images/icon2.png" alt="Icone">
   <div id="header-direita">
     <ion-buttons>
-      <ion-button>cadastro de vagas</ion-button>
+      <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active" >cadastro de vagas</ion-button>
+      <ion-button [routerLink]="['/alterar-cadastros']" routerLinkActive="router-link-active" >alterar cadastros</ion-button>
     </ion-buttons>
     <div>
       <img id="userIcon" src="../../assets/images/user.png" alt="">

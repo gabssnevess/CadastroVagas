@@ -1,0 +1,56 @@
+#secao-tabela {
+    padding: 20px;
+    border-radius: 20px;
+    border: black solid 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    h3 {
+        border-bottom: solid 3px var(--primary-color);
+        padding: 10px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    min-width: 400px;
+    // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th, td {
+    padding: 12px 15px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+table tbody tr:hover {
+    font-weight: bold;
+    color: #009879;
+}
+
+.btn-alterar {
+    --background: rgb(83, 83, 178);
+    --box-shadow: none;
+}
+
+.btn-deletar {
+    --background: red;
+    --box-shadow: none;
+}
