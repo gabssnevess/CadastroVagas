@@ -1,18 +1,3 @@
-header {
-  padding: 15px;
-  margin: 0;
-  img {
-    margin: 0;
-    width: 15%;
-  }
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 5px var(--primary-color) solid;
-  margin-bottom: 30px;
-  background-color: var(--secondary-color);
-}
-
 #formulario {
   display: flex;
   align-items: center;
@@ -38,27 +23,4 @@ header {
   border: 1px solid black;
   border-radius: 20px;
   padding: 5px;
-}
-
-#header-direita {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  div {
-    background-color: var(--primary-color);
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    img {
-      width: 30px;
-    }
-  }
-}
-
-#logOut {
-  --background: red;
-  --box-shadow: none;
 }
