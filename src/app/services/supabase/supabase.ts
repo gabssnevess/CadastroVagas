@@ -73,8 +73,8 @@ export class Supabase {
   // Update - tbl_VagasEmAberto
   async updateVaga(id: number, situacao: string, observacao: string) {
     return await this.supabase.from('tbl_VagasEmAberto').update({
-      situcao: situacao,
-      observacao: observacao,
+      situacao: situacao,
+      observacoes: observacao,
     }).eq('id', id);
   }
 }
