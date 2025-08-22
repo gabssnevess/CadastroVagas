@@ -54,3 +54,42 @@ table tbody tr:hover {
     --background: red;
     --box-shadow: none;
 }
+
+#secao-alterar {
+    padding: 20px;
+    border-radius: 20px;
+    border: black solid 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titulo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 3px var(--primary-color);
+    padding: 10px;
+}
+
+ion-select, ion-input {
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    --padding-start: 10px;
+    --padding-end: 10px;
+}
+
+ion-text {
+    padding: 20px;
+    background-color: #dddddd;
+    border-radius: 20px;
+}
+
+#formAlterar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

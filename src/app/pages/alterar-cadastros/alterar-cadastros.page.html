@@ -1,7 +1,7 @@
 <ion-content>
   <app-header></app-header>
 
-  <section id="secao-tabela">
+  <section id="secao-tabela" *ngIf="mostrarFormulario === false">
     <h3>Registros Existentes</h3>
     <table>
       <thead>
@@ -40,11 +40,33 @@
           <td>{{item.tipo_contratacao}}</td>
           <td>{{item.observacoes}}</td>
           <td>
-            <ion-button class="btn-alterar">alterar</ion-button>
+            <ion-button class="btn-alterar" (click)="ToggleFormulario(); GuardarItems(item.id)">alterar</ion-button>
             <ion-button class="btn-deletar">deletar</ion-button>
           </td>
         </tr>
       </tbody>
     </table>
+  </section>
+
+  <section id="secao-alterar" *ngIf="mostrarFormulario === true">
+    <div class="titulo-card">
+      <h3>Alterando Cadastro</h3>
+      <ion-button class="btn-alterar" (click)="ToggleFormulario()">fechar formulário</ion-button>
+    </div>
+    <div *ngFor="let item of linhaSelecionada" id="formAlterar">
+      <ion-text>Id do Registro: {{item.id}}</ion-text>
+      <ion-select label="Situação" labelPlacement="floating" [(ngModel)]="situacao">
+        <ion-select-option>Abertura de Vaga</ion-select-option>
+        <ion-select-option>Divulgação</ion-select-option>
+        <ion-select-option>Triagem</ion-select-option>
+        <ion-select-option>Seleção</ion-select-option>
+        <ion-select-option>Com Cliente</ion-select-option>
+        <ion-select-option>Documentação</ion-select-option>
+        <ion-select-option>Entregue ao DP</ion-select-option>
+        <ion-select-option>Vaga Concluída</ion-select-option>
+      </ion-select>
+      <ion-input label="Observação" labelPlacement="floating" [(ngModel)]="observacao"></ion-input>
+      <ion-button (click)="AlterarVaga(item.id, situacao, observacao)">salvar alterações</ion-button>
+    </div>
   </section>
 </ion-content>

@@ -40,6 +40,11 @@ export class Supabase {
     return await this.supabase.from('tbl_VagasEmAberto').select('*');
   }
 
+  // Get - tbl_VagasEmAberto
+  async getVagasId(id: number) {
+    return await this.supabase.from('tbl_VagasEmAberto').select('*').eq('id', id);
+  }
+
   // Get - tbl_Clientes
   async getClientes() {
     return await this.supabase.from('tbl_Cliente').select('*');
@@ -63,5 +68,13 @@ export class Supabase {
       tipo_contratacao: tipoContratacao,
       observacoes: observacoes
     }])
+  }
+
+  // Update - tbl_VagasEmAberto
+  async updateVaga(id: number, situacao: string, observacao: string) {
+    return await this.supabase.from('tbl_VagasEmAberto').update({
+      situcao: situacao,
+      observacao: observacao,
+    }).eq('id', id);
   }
 }
