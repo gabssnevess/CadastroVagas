@@ -4,6 +4,7 @@
     border: black solid 1px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 30px;
     h3 {
         border-bottom: solid 3px var(--primary-color);
         padding: 10px;
@@ -13,9 +14,9 @@
 table {
     border-collapse: collapse;
     font-size: 0.8em;
-    font-family: sans-serif;
     min-width: 400px;
     // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    font-family: 'JetBrains Mono';
 }
 
 table thead tr {
@@ -26,6 +27,21 @@ table thead tr {
 
 table th, td {
     padding: 12px 15px;
+}
+
+td {
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden;    /* Esconde o texto que ultrapassa o espaço */
+    text-overflow: ellipsis; /* Adiciona "..." ao texto cortado */
+    max-width: 100px;
+}
+
+#botoesFodas {
+    display: flex;
+    flex-direction: column;
+    ion-button {
+        font-family: 'JetBrains Mono';
+    }
 }
 
 table tbody tr {
@@ -64,6 +80,7 @@ table tbody tr:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 30px;
 }
 
 .titulo-card {
@@ -75,6 +92,7 @@ table tbody tr:hover {
 }
 
 ion-select, ion-input {
+    font-family: 'JetBrains Mono';
     border: 1px solid black;
     border-radius: 20px;
     overflow: hidden;

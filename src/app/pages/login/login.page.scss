@@ -1,5 +1,6 @@
 ion-content {
     --background: var(--secondary-color);
+    font-family: 'JetBrains Mono';
 }
 
 section {
@@ -18,9 +19,13 @@ section {
         justify-content: center;
         gap: 10px;
         ion-button {
+            font-family: 'JetBrains Mono';
             width: 100%;
             --background: var(--primary-color);
             --box-shadow: none;
+        }
+        ion-input {
+            font-family: 'JetBrains Mono';
         }
     }
 }

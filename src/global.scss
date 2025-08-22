@@ -36,7 +36,6 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 5px var(--primary-color) solid;
-  margin-bottom: 30px;
   background-color: var(--secondary-color);
 }
 
@@ -61,4 +60,9 @@ header {
 #logOut {
   --background: red;
   --box-shadow: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+ion-content {
+  font-family: 'JetBrains Mono';
 }
