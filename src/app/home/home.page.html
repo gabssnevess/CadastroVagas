@@ -16,12 +16,13 @@
         <ion-select-option>Substituição</ion-select-option>
         <ion-select-option>Cobre Férias</ion-select-option>
         <ion-select-option>Ampliação</ion-select-option>
-        <ion-select-option>Compart</ion-select-option>
+        <ion-select-option>Licença Maternidade</ion-select-option>
         <ion-select-option>Auxílio Doença</ion-select-option>
         <ion-select-option>Acidente de Trabalho</ion-select-option>
       </ion-select>
 
       <ion-select label="Selecione o cliente..." labelPlacement="floating" [(ngModel)]="cliente">
+        <ion-select-option>Compartilhado</ion-select-option>
         <ion-select-option *ngFor="let item of clientes">{{item.nome}}</ion-select-option>
       </ion-select>
 
